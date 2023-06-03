@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import {Card, CardImg, CardImgOverlay, CardBody, CardTitle, CardText} from 'reactstrap';
+
+
 class DishDetail extends Component{
     constructor(props){
         super(props);
@@ -10,7 +12,7 @@ class DishDetail extends Component{
             return(<div></div>);
         }
         return(
-            <div className='col-12 col-md-3 m-1'>
+            <div className='col-12 col-md-3'>
                 <Card>
                     <CardImg width='100%' src={dish.image} alt={dish.name} />                    
                     <CardBody>
@@ -21,6 +23,7 @@ class DishDetail extends Component{
             </div>
         );
     }
+
     renderComments(comments){
         if(comments == null){
             return(<div></div>);
@@ -42,7 +45,7 @@ class DishDetail extends Component{
         });
 
         return (
-            <div className='col-12 col-md-5 m-1'>
+            <div className='col-12 col-md-5 mt-1'>
                 <h4> Comments </h4>
                 <ul className='list-unstyled'>
                     {showcmnts}
